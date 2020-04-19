@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>跳动的心2</title>
+    <style>
+      #heart {
+        max-width: 500px;
+        max-height: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        animation: hhh 0.5s cubic-bezier(0.5, 1, 0.89, 1) infinite alternate;
+      }
+
+      @keyframes hhh {
+        from {
+          transform: scale(1.1);
+        }
+        to {~
+          transform: scale(1.5);
+        }
+      }
+
+      .left,
+      .right {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: yellowgreen;
+      }
+      .left {
+        transform: translate(20%, 70%) rotate(-45deg);
+        border-radius: 50% 50% 0 0;
+      }
+      .right {
+        transform: translate(120%, 70%) rotate(45deg);
+        border-radius: 50% 50% 0 0;
+      }
+      .bottom {
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        background-color: yellowgreen;
+        transform: translate(70%, 120%) rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="heart">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="bottom"></div>
+    </div>
+  </body>
+</html>
